@@ -68,5 +68,35 @@ public class Employee {
             }
         }
     }
+    // Статический метод для вычисления среднего возраста сотрудников
+    public static double calculateAverageAge(Employee[] employees) {
+        if (employees == null || employees.length == 0) {
+            return 0.0;
+        }
+
+        int totalAge = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                totalAge += employee.getAge();
+            }
+        }
+
+        return (double) totalAge / employees.length;
+    }
+    // Статический метод для вычисления средней зарплаты сотрудников
+    public static double calculateAverageSalary(Employee[] employees) {
+        if (employees == null || employees.length == 0) {
+            return 0.0;
+        }
+
+        double totalSalary = 0.0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                totalSalary += employee.getSalary();
+            }
+        }
+
+        return totalSalary / employees.length;
+    }
 }
 

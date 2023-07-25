@@ -1,5 +1,7 @@
 package org.example;
 
+import java.text.DecimalFormat;
+
 public class Main {
     public static void main(String[] args) {
         // Создаем массив для хранения 5 сотрудников
@@ -32,5 +34,16 @@ public class Main {
                 System.out.println("--------------------");
             }
         }
+        // Вычисляем и выводим средний возраст и среднюю зарплату сотрудников
+        double averageAge = Employee.calculateAverageAge(employees);
+        double averageSalary = Employee.calculateAverageSalary(employees);
+
+        // Округляем средний возраст и среднюю зарплату до двух знаков после запятой
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
+        String formattedAverageAge = decimalFormat.format(averageAge);
+        String formattedAverageSalary = decimalFormat.format(averageSalary);
+
+        System.out.println("Средний возраст сотрудников: " + formattedAverageAge);
+        System.out.println("Средняя зарплата сотрудников: " + formattedAverageSalary);
     }
 }
