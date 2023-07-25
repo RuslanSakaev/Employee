@@ -60,5 +60,11 @@ public class Employee {
         return String.format("Full Name: %s\nPosition: %s\nPhone Number: %s\nSalary: %.2f\nAge: %d",
                 fullName, position, phoneNumber, salary, age);
     }
+    // Метод для повышения зарплаты сотрудникам старше 45 лет
+    public void increaseSalaryForOlderEmployees(int ageThreshold, double increaseAmount) {
+        if (age > ageThreshold) {
+            salary += increaseAmount;
+        }
+    }
 }
 
