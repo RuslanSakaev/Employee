@@ -13,6 +13,7 @@ public class Main {
         employees[2] = new Employee("Тёркин Дмитрий Петрович", "Manager", "+7-555-123-45-56", 60000, 50);
         employees[3] = new Employee("Лаврова Анна Сергеевна", "QA Engineer", "+7-111-222-33-33", 48000, 42);
         employees[4] = new Employee("Маркин Лев Дмитриевич", "Developer", "455-56-66", 52000, 28);
+        employees[5] = new Manager("Валерева Александра Дмитриевна", "Senior Manager", "778-88-99", 80000, 55);
 
         // Выводим информацию о сотрудниках до повышения зарплаты
         for (Employee employee : employees) {
@@ -25,7 +26,7 @@ public class Main {
         // Повышаем зарплату сотрудникам старше 45 лет на 5000
         int ageThreshold = 45;
         double increaseAmount = 5000.0;
-        Employee.increaseSalaryForOlderEmployees(employees, ageThreshold, increaseAmount);
+        Manager.increaseSalaryForOlderEmployees(employees, ageThreshold, increaseAmount);
 
         // Выводим информацию о сотрудниках после повышения зарплаты
         for (Employee employee : employees) {
