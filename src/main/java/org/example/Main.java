@@ -23,11 +23,7 @@ public class Main {
         // Повышаем зарплату сотрудникам старше 45 лет на 5000
         int ageThreshold = 45;
         double increaseAmount = 5000.0;
-        for (Employee employee : employees) {
-            if (employee != null) { // Проверяем на null перед вызовом метода
-                employee.increaseSalaryForOlderEmployees(ageThreshold, increaseAmount);
-            }
-        }
+        Employee.increaseSalaryForOlderEmployees(employees, ageThreshold, increaseAmount);
 
         // Выводим информацию о сотрудниках после повышения зарплаты
         for (Employee employee : employees) {

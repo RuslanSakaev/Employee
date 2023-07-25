@@ -60,10 +60,12 @@ public class Employee {
         return String.format("Full Name: %s\nPosition: %s\nPhone Number: %s\nSalary: %.2f\nAge: %d",
                 fullName, position, phoneNumber, salary, age);
     }
-    // Метод для повышения зарплаты сотрудникам старше 45 лет
-    public void increaseSalaryForOlderEmployees(int ageThreshold, double increaseAmount) {
-        if (age > ageThreshold) {
-            salary += increaseAmount;
+    // Статический метод для повышения зарплаты сотрудников старше определенного возраста
+    public static void increaseSalaryForOlderEmployees(Employee[] employees, int ageThreshold, double increaseAmount) {
+        for (Employee employee : employees) {
+            if (employee != null && employee.getAge() > ageThreshold) {
+                employee.setSalary(employee.getSalary() + increaseAmount);
+            }
         }
     }
 }
