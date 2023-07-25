@@ -56,5 +56,9 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
+    public String toString() {
+        return String.format("Full Name: %s\nPosition: %s\nPhone Number: %s\nSalary: %.2f\nAge: %d",
+                fullName, position, phoneNumber, salary, age);
+    }
 }
 
