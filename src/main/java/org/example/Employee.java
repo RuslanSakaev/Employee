@@ -7,7 +7,6 @@ public class Employee {
     private double salary;
     private int age;
 
-    // Конструктор класса
     public Employee(String fullName, String position, String phoneNumber, double salary, int age) {
         this.fullName = fullName;
         this.position = position;
@@ -16,7 +15,8 @@ public class Employee {
         this.age = age;
     }
 
-    // Геттеры и сеттеры для доступа к полям
+    // Геттеры и сеттеры
+
     public String getFullName() {
         return fullName;
     }
@@ -56,17 +56,11 @@ public class Employee {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
     public String toString() {
-        return String.format("Full Name: %s\nPosition: %s\nPhone Number: %s\nSalary: %.2f\nAge: %d",
+        return String.format("ФИО: %s\nДолжность: %s\nТелефон: %s\nЗарплата: %.2f\nВозраст: %d",
                 fullName, position, phoneNumber, salary, age);
-    }
-    // Статический метод для повышения зарплаты сотрудников старше определенного возраста
-    public static void increaseSalaryForOlderEmployees(Employee[] employees, int ageThreshold, double increaseAmount) {
-        for (Employee employee : employees) {
-            if (employee != null && employee.getAge() > ageThreshold) {
-                employee.setSalary(employee.getSalary() + increaseAmount);
-            }
-        }
     }
     // Статический метод для вычисления среднего возраста сотрудников
     public static double calculateAverageAge(Employee[] employees) {
