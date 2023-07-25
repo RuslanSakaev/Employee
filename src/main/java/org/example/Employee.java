@@ -1,11 +1,11 @@
 package org.example;
 
 public class Employee {
-    private String fullName;
-    private String position;
-    private String phoneNumber;
+    private final String fullName;
+    private final String position;
+    private final String phoneNumber;
     private double salary;
-    private int age;
+    private final int age;
 
     public Employee(String fullName, String position, String phoneNumber, double salary, int age) {
         this.fullName = fullName;
@@ -17,30 +17,6 @@ public class Employee {
 
     // Геттеры и сеттеры
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public double getSalary() {
         return salary;
     }
@@ -51,10 +27,6 @@ public class Employee {
 
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     @Override

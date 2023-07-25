@@ -18,7 +18,7 @@ public class Main {
         // Выводим информацию о сотрудниках до повышения зарплаты
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
                 System.out.println("--------------------");
             }
         }
@@ -31,7 +31,7 @@ public class Main {
         // Выводим информацию о сотрудниках после повышения зарплаты
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
                 System.out.println("--------------------");
             }
         }
